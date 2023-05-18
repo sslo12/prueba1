@@ -1,0 +1,50 @@
+version: "3"
+services:
+  microusuarios:
+    image: microusuarios
+    links:
+      - db
+    ports:
+      - "3001:3001"
+  micropaquetes:
+    image: micropaquetes
+    links:
+      - db
+    ports:
+      - "3002:3002"
+  micronotificaciones:
+    image: micronotificaciones
+    links:
+      - db
+    ports:
+      - "3003:3003"
+  microdatos:
+    image: microdatos
+    links:
+      - db
+    ports:
+      - "3004:3004"
+  microautenticacion:
+    image: microautenticacion
+    links:
+      - db
+    ports:
+      - "3000:3000"
+  microweb1:
+    image: microweb1
+    links:
+      - microusuarios
+      - micropaquetes
+      - micronotificaciones
+      - microdatos
+      - microautenticacion
+    ports:
+      - "1080:80"
+  db:
+    image: mysql:5.7
+    ports:
+      - "32000:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
