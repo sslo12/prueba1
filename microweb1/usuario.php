@@ -52,7 +52,7 @@
     </thead> 
     <tbody> 
     <?php 
-       $servurl="http://192.168.100.2:3004/dato/usuarios/$us";
+       $servurl="http://172.190.52.193:3004/dato/usuarios/$us";
        $curl=curl_init($servurl);
        
        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
