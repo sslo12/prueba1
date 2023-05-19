@@ -2,27 +2,27 @@
 
 Esta es una aplicacion web basada en microservicios, que consta de 5 microservicios, la cual permite generar alertas para evitar inciendos por medio de mediciones de temperatura en la cocina.
 
-### Requisitos previos
+## Requisitos previos
 ***
 Lista de tecnologias usadas en el proyecto:
 * Azure virtual machines
 * Docker swarm
 * Apache Spark
 
-### Desarrollo
-#### Crear el cluster Docker-swarm
+## Desarrollo
+### Crear el cluster Docker-swarm
 Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2.
 ```
 $ swarm init --advertise-addr 10.2.0.5
 $ sudo docker node ls
 ```
 ***
-#### Ejecute en el servidor
+### Ejecute en el servidor
 Clonar el repositorio que contiene la aplicacion. 
 ```
 $ git clone https://github.com/sslo12/smart_kitchen1.git
 ```
-#### Crear las imagenes 
+### Crear las imagenes 
 Crear las imagenes de cada servicio en la ruta donde este el Dockerfile.
 
 azureusert@vm2:~/smart_kitchen/microweb1$
