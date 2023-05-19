@@ -1,4 +1,4 @@
-# smart_kitchen
+# Despliegue de la aplicaión smart_kitchen
 
 Esta es una aplicacion web basada en microservicios, que consta de 5 microservicios, la cual permite generar alertas para evitar inciendos por medio de mediciones de temperatura en la cocina.
 
@@ -87,4 +87,36 @@ $sudo docker service ls
 ```
 http://172.190.52.193:1080/microweb/
 ```
+# Análisis de datos distribuidos con Apache Spark
 
+Este es un código en Python que utiliza Apache Spark para realizar análisis y agrupación de datos a partir de un conjunto de datos en formato CSV. El código realiza tres análisis diferentes y guarda los resultados en archivos CSV.
+
+### Requisitos
+Apache Spark instalado en el entorno de ejecución.
+Un archivo de datos en formato CSV llamado "dataset-proyecto.csv" en el directorio actual.
+
+### Pasos del Código
+Crear una sesión de Spark: Se crea una sesión de Spark con el nombre "Análisis de datos".
+
+Cargar el dataset en un DataFrame: Se carga el archivo CSV en un DataFrame de Spark.
+
+Análisis 1: Análisis y agrupación de datos: Se realiza un análisis y agrupación de datos basado en el campo "id_nodo". Se calcula la cantidad de registros con cada tipo de valor ("verde", "amarilla" y "roja") y se ordena el resultado por el número de registros con valor "roja" de forma descendente.
+
+Mostrar el resultado del Análisis 1: Se muestra el resultado obtenido en el primer análisis.
+
+Convertir la columna "tiempo" a tipo fecha: Se convierte la columna "tiempo" del DataFrame a tipo de dato fecha (timestamp).
+
+Filtrar los datos para "tipo" igual a "roja": Se filtran los datos del DataFrame original para quedarse solo con los registros que tienen el valor "roja" en el campo "tipo".
+
+Análisis 2: Contar incendios "roja" por mes: Se agrupan los registros por mes y se cuenta la cantidad de incendios "roja" para cada mes. Los resultados se ordenan por mes en orden ascendente.
+
+Mostrar el resultado del Análisis 2: Se muestra el resultado obtenido en el segundo Análisis.
+
+Análisis 3: Obtener promedio de temperatura y gas por nodo: Se calcula el promedio de temperatura y gas por cada nodo. Los resultados se ordenan por el campo "id_nodo".
+
+Mostrar el resultado del Análisis 3: Se muestra el resultado obtenido en el tercer Análisis.
+
+Guardar los resultados en archivos CSV: Los resultados de cada aplicación se guardan en archivos CSV con nombres personalizados: "resultado_analisis1.csv", "resultado_analisis2.csv" y "resultado_analisis3.csv".
+
+# Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
+Link: https://youtu.be/FZjQmvwBAdU
