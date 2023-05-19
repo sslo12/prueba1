@@ -61,7 +61,7 @@
     </thead> 
     <tbody> 
     <?php 
-       $servurl="http://192.168.100.2:3001/usuario";
+       $servurl="http://172.190.52.193:3001/usuario";
        $curl=curl_init($servurl);
        
        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
