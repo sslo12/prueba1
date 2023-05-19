@@ -56,7 +56,7 @@ sudo add-apt-repository \
  stable"
 ```
 Actualice el paquete apt e instale la última versión de Docker Engine.
-
+***
 ### 2. Crear el cluster Docker-swarm
 Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2.
 ```
