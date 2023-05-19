@@ -23,8 +23,9 @@ Clonar el repositorio que contiene la aplicacion.
 $ git clone https://github.com/sslo12/smart_kitchen.git
 ```
 #### Crear las imagenes 
-Crear las imagenes de cada servicio en la ruta donde este el Dockerfile. 
-azureusert@vm2:~/smart_kitchen/microweb1$\
+Crear las imagenes de cada servicio en la ruta donde este el Dockerfile.
+/
+azureusert@vm2:~/smart_kitchen/microweb1$
 ```
 $ sudo docker build -t microweb1 .
 ```
