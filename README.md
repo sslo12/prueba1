@@ -189,10 +189,12 @@ result3 = df.groupBy("id_nodo").agg(
 result3.show()
 ```
 ### Guardar los resultados en archivos CSV con nombres personalizados
+```
 result1.write.mode("overwrite").csv("resultado_analisis1.csv", header=True)
 result2.write.mode("overwrite").csv("resultado_analisis2.csv", header=True)
 result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 ////////////////////////////////
+```
 
 ## Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
 Link: https://youtu.be/FZjQmvwBAdU
