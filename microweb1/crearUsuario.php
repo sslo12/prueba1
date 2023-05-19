@@ -8,7 +8,7 @@ $telefono2=$_POST["telefono2"];
 
 
 
-$url = 'http://192.168.100.2:3001/usuario'; 
+$url = 'http://172.190.52.193:3001/usuario'; 
 $data = array( 
     'tipo_usuario' => $tipo_usuario, 
     'usuario' => $usuario, 
