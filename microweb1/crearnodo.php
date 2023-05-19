@@ -3,7 +3,7 @@ $direccion=$_POST["direccion"];
 $id_usuario=$_POST["id_usuario"];
 
 
-$url = 'http://192.168.100.2:3002/nodo'; 
+$url = 'http://172.190.52.193:3002/nodo'; 
 $data = array( 
     'direccion' => $direccion, 
     'id_usuario' => $id_usuario,
