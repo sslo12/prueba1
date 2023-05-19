@@ -1,7 +1,7 @@
 <?php
 $id = $_POST["id"];
 
-$url = "http://192.168.100.2:3001/usuario/$id";
+$url = "http://172.190.52.193:3001/usuario/$id";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
