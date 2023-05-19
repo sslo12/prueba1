@@ -11,25 +11,22 @@ if ($response===false){
 header("Location:index.html");
 }
 $resp = json_decode($response);
-$result = $resp[0];
-$tipo_usuario = $result -> tipo_usuario;
 
-                
-if (count($resp) != 0){
-session_start();
-$_SESSION["usuario"]=$user;
-if ($tipo_usuario == "admin"){ 
-header("Location:admin.php");
-} 
-elseif ($tipo_usuario == "bombero") {
-header("Location:bombero.php");
+if (count($resp) != 0) {
+    $result = $resp[0];
+    $tipo_usuario = $result->tipo_usuario;
 
-}
-else { 
-header("Location:usuario.php");
-} 
-}
-else {
-header("Location:index.html"); 
+    session_start();
+    $_SESSION["usuario"] = $user;
+
+    if ($tipo_usuario == "admin") {
+        header("Location:admin.php");
+    } elseif ($tipo_usuario == "bombero") {
+        header("Location:bombero.php");
+    } else {
+        header("Location:usuario.php");
+    }
+} else {
+    header("Location:index.html");
 }
 ?>
