@@ -31,38 +31,38 @@ $ git clone https://github.com/sslo12/smart_kitchen.git
 #### Crear las imagenes 
 Crear las imagenes de cada servicio en la ruta donde este el Dockerfile. 
 ```
-azureusert@vm1:~/smart_kitchen/microweb1$
+azureusert@vm2:~/smart_kitchen/microweb1$
 $ sudo docker build -t microweb1 .
 ```
 Imagen microautenticacion. 
 ```
-azureuser@vm1:~/smart_kitchen/$ cd microautenticacion
+azureuser@vm2:~/smart_kitchen/$ cd microautenticacion
 $ sudo docker build -t microautenticacion .
 ```
 Imagen microusuarios. 
 ```
-azureuser@vm1:~/smart_kitchen/$ cd microusuarios
+azureuser@vm2:~/smart_kitchen/$ cd microusuarios
 $ sudo docker build -t microusuarios .
 ```
 Imagen micropaquetes. 
 ```
-azureuser@vm1:~/smart_kitchen/$ cd micropaquetes
+azureuser@vm2:~/smart_kitchen/$ cd micropaquetes
 $ sudo docker build -t micropaquetes .
 ```
 Imagen microdatos. 
 ```
-azureuser@vm1:~/smart_kitchen/$ cd microdatos
+azureuser@vm2:~/smart_kitchen/$ cd microdatos
 $ sudo docker build -t microdatos .
 ```
 Imagen micronotificaciones. 
 ```
-azureuser@vm1:~/smart_kitchen/$ cd micronotificaciones
+azureuser@vm2:~/smart_kitchen/$ cd micronotificaciones
 $ sudo docker build -t micronotificaciones .
 ```
 ***
 Ejecutar el Docker Swarm. 
 ```
-azureuser@vm1:~/smart_kitchen/$
+azureuser@vm2:~/smart_kitchen/$
 $sudo docker stack deploy -c docker-swarm.yml stack1
 ```
 Verificar las imagenes creadas. 
@@ -90,6 +90,6 @@ $sudo docker service ls
 #### Comprobar el funcionamiento en el navegador
 
 ```
-http://10.2.0.4:1080/microweb
+http://172.190.52.193:1080/microweb/
 ```
 
