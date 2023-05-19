@@ -13,14 +13,8 @@ Lista de tecnologias usadas en el proyecto:
 #### Crear el cluster Docker-swarm
 Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm1 (master) y otro en la maquina de azure vm2 (worker). 
 ```
-$ swarm init --advertise-addr 10.2.0.4
+$ swarm init --advertise-addr 10.2.0.5
 $ sudo docker node ls
-```
-En la maquina vm2 como worker. 
-```
-$ sudo docker swarm join --token SWMTKN-1-
-4qt4bp8o1jeakj6xtgfsa62esrgb8mq6fyip25444653jv1c2b-cqdk5hl7yf17xi1a943ntw3zo
-10.2.0.4:2377
 ```
 ***
 #### Ejecute en el servidor
@@ -30,13 +24,13 @@ $ git clone https://github.com/sslo12/smart_kitchen.git
 ```
 #### Crear las imagenes 
 Crear las imagenes de cada servicio en la ruta donde este el Dockerfile. 
-```
 azureusert@vm2:~/smart_kitchen/microweb1$
+```
 $ sudo docker build -t microweb1 .
 ```
 Imagen microautenticacion. 
-```
 azureuser@vm2:~/smart_kitchen/$ cd microautenticacion
+```
 $ sudo docker build -t microautenticacion .
 ```
 Imagen microusuarios. 
