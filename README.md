@@ -30,8 +30,8 @@ azureusert@vm2:~/smart_kitchen/microweb1$
 $ sudo docker build -t microweb1 .
 ```
 Imagen microautenticacion. 
-azureuser@vm2:~/smart_kitchen/$ cd microautenticacion
 ```
+azureuser@vm2:~/smart_kitchen/$ cd microautenticacion
 $ sudo docker build -t microautenticacion .
 ```
 Imagen microusuarios. 
