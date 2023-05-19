@@ -1,7 +1,7 @@
 <?php
 $id = $_POST["id"];
 
-$url = "http://192.168.100.2:3002/nodo/$id";
+$url = "http://172.190.52.193:3002/nodo/$id";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
