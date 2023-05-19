@@ -22,37 +22,40 @@ Ingresamos al servidor atraves de ssh.
 ```
 ssh -i vm2_key.pem azureuser@vm2gustavo12.eastus.cloudapp.azure.com
 ```
-1. Desinstalar versiones anteriores de Docker
+
+Desinstalar versiones anteriores de Docker
+```
 sudo apt-get remove docker docker-engine docker.io containerd runc 
+```
+Configurar el repositorio
 
-2. Configurar el repositorio
-Actualizar el paquete apt e instale paquetes para permitir que apt use 
-un repositorio a través de HTTPS
-
+Actualizar el paquete apt, e instale paquetes para permitir que apt use un repositorio a través de HTTPS
+```
 $ sudo apt-get update
-
+```
+```
 $ sudo apt-get install \
  apt-transport-https \
  ca-certificates \
  curl \
  gnupg-agent \
  software-properties-common
-
-3. Agregue la clave GPG* oficial de Docker
-
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
+```
+Agregue la clave GPG* oficial de Docker
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+```
 sudo apt-key fingerprint 0EBFCD88
-
-4. Agregar un repositorio stable
+```
+Agregar un repositorio stable
+```
 sudo add-apt-repository \
  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
  $(lsb_release -cs) \
  stable"
-
-5. Actualice el paquete apt e instale la última versión de Docker 
-Engine.
-
+```
+Actualice el paquete apt e instale la última versión de Docker Engine.
 
 ### 2. Crear el cluster Docker-swarm
 Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2.
