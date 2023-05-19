@@ -72,44 +72,44 @@ $ git clone https://github.com/sslo12/smart_kitchen1.git
 ### Crear las imagenes 
 Crear las imagenes de cada servicio en la ruta donde este el Dockerfile.
 
-azureusert@vm2:~/smart_kitchen/microweb1$
+azureusert@vm2:~/smart_kitchen1/microweb1$
 ```
 $ sudo docker build -t microweb1 .
 ```
 Imagen microautenticacion. 
 
-azureuser@vm2:~/smart_kitchen/$ cd microautenticacion
+azureuser@vm2:~/smart_kitchen1/$ cd microautenticacion
 ```
 $ sudo docker build -t microautenticacion .
 ```
 Imagen microusuarios. 
 
-azureuser@vm2:~/smart_kitchen/$ cd microusuarios
+azureuser@vm2:~/smart_kitchen1/$ cd microusuarios
 ```
 $ sudo docker build -t microusuarios .
 ```
 Imagen micropaquetes. 
 
-azureuser@vm2:~/smart_kitchen/$ cd micropaquetes
+azureuser@vm2:~/smart_kitchen1/$ cd micropaquetes
 ```
 $ sudo docker build -t micropaquetes .
 ```
 Imagen microdatos. 
 
-azureuser@vm2:~/smart_kitchen/$ cd microdatos
+azureuser@vm2:~/smart_kitchen1/$ cd microdatos
 ```
 $ sudo docker build -t microdatos .
 ```
 Imagen micronotificaciones. 
 
-azureuser@vm2:~/smart_kitchen/$ cd micronotificaciones
+azureuser@vm2:~/smart_kitchen1/$ cd micronotificaciones
 ```
 $ sudo docker build -t micronotificaciones .
 ```
 ***
 Ejecutar el Docker Swarm. 
 
-azureuser@vm2:~/smart_kitchen/$
+azureuser@vm2:~/smart_kitchen1/$
 ```
 $sudo docker stack deploy -c docker-swarm.yml stack1
 ```
@@ -153,7 +153,7 @@ Crear una sesión de Spark: Se crea una sesión de Spark con el nombre "Análisi
 
 Cargar el dataset en un DataFrame: Se carga el archivo CSV en un DataFrame de Spark.
 
-Análisis 1: Análisis y agrupación de datos: Se realiza un análisis y agrupación de datos basado en el campo "id_nodo". Se calcula la cantidad de registros con cada tipo de valor ("verde", "amarilla" y "roja") y se ordena el resultado por el número de registros con valor "roja" de forma descendente.
+**Análisis 1**: Análisis y agrupación de datos: Se realiza un análisis y agrupación de datos basado en el campo "id_nodo". Se calcula la cantidad de registros con cada tipo de valor ("verde", "amarilla" y "roja") y se ordena el resultado por el número de registros con valor "roja" de forma descendente.
 
 Mostrar el resultado del Análisis 1: Se muestra el resultado obtenido en el primer análisis.
 
@@ -161,11 +161,11 @@ Convertir la columna "tiempo" a tipo fecha: Se convierte la columna "tiempo" del
 
 Filtrar los datos para "tipo" igual a "roja": Se filtran los datos del DataFrame original para quedarse solo con los registros que tienen el valor "roja" en el campo "tipo".
 
-Análisis 2: Contar incendios "roja" por mes: Se agrupan los registros por mes y se cuenta la cantidad de incendios "roja" para cada mes. Los resultados se ordenan por mes en orden ascendente.
+**Análisis 2**: Contar incendios "roja" por mes: Se agrupan los registros por mes y se cuenta la cantidad de incendios "roja" para cada mes. Los resultados se ordenan por mes en orden ascendente.
 
 Mostrar el resultado del Análisis 2: Se muestra el resultado obtenido en el segundo Análisis.
 
-Análisis 3: Obtener promedio de temperatura y gas por nodo: Se calcula el promedio de temperatura y gas por cada nodo. Los resultados se ordenan por el campo "id_nodo".
+**Análisis 3**: Obtener promedio de temperatura y gas por nodo: Se calcula el promedio de temperatura y gas por cada nodo. Los resultados se ordenan por el campo "id_nodo".
 
 Mostrar el resultado del Análisis 3: Se muestra el resultado obtenido en el tercer Análisis.
 
