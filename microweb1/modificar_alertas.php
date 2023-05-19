@@ -2,7 +2,7 @@
 $id=$_POST["id"]; 
 $estado=$_POST["estado"]; 
 
-$url = "http://192.168.100.2:3003/alerta/$id"; 
+$url = "http://172.190.52.193:3003/alerta/$id"; 
 $data = array( 
     'estado' => $estado, 
 );     
