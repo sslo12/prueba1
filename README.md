@@ -11,7 +11,7 @@ Lista de tecnologias usadas en el proyecto:
 
 ### Desarrollo
 #### Crear el cluster Docker-swarm
-Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm1 (master) y otro en la maquina de azure vm2 (worker). 
+Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2.
 ```
 $ swarm init --advertise-addr 10.2.0.5
 $ sudo docker node ls
@@ -20,7 +20,7 @@ $ sudo docker node ls
 #### Ejecute en el servidor
 Clonar el repositorio que contiene la aplicacion. 
 ```
-$ git clone https://github.com/sslo12/smart_kitchen.git
+$ git clone https://github.com/sslo12/smart_kitchen1.git
 ```
 #### Crear las imagenes 
 Crear las imagenes de cada servicio en la ruta donde este el Dockerfile.
