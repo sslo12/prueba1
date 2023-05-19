@@ -12,13 +12,16 @@ Lista de tecnologias usadas en el proyecto:
 ## Desarrollo
 
 ### 1. Crear una instancia en AZURE
-se crea la instancia en azure ubuntu 
-(podes adjuntar link de tutorial)
-se descarga la clave en mi caso es vm2_key.pem
-le damos permisos al archivo para poderla usar 
-(podes adjuntar link de tutorial)
-ingresamos el servidor atraves de ssh.
+Se crea la instancia en azure ubuntu (podes adjuntar link de tutorial).
+
+Se descarga la clave en nuestro caso es **vm2_key.pem**
+
+Le otorgamos los permisos al archivo para poder usarla (podes adjuntar link de tutorial)
+
+Ingresamos al servidor atraves de ssh.
+```
 ssh -i vm2_key.pem azureuser@vm2gustavo12.eastus.cloudapp.azure.com
+```
 1. Desinstalar versiones anteriores de Docker
 sudo apt-get remove docker docker-engine docker.io containerd runc 
 
