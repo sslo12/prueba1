@@ -208,12 +208,6 @@ result2.write.mode("overwrite").csv("resultado_analisis2.csv", header=True)
 result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 ```
 ***
-# Paso a paso para conectar la pagina web al dashboard desde la API de Power BI
-Link: https://youtu.be/FZjQmvwBAdU
-Para ver los dashboard hay que abrir una ventana en incognito en la página web y se debe iniciar sesión con este usuario y contraseña
-Usuario: shirley@kitchensm.onmicrosoft.com
-Contraseña: 3147144287Sl
-
 # Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
 
 Link: https://youtu.be/FZjQmvwBAdU
@@ -221,6 +215,5 @@ Para ver los dashboard hay que abrir una ventana en incognito en la página web 
 Usuario: shirley@kitchensm.onmicrosoft.com
 Contraseña: 3147144287Sl
 ***
-## Informe final: https://docs.google.com/document/d/1GPu64phOQBBfllwoBGo87Dbkw335Z0Kr/edit?usp=sharing&ouid=108519585901992583321&rtpof=true&sd=true
-## Diapositivas: https://www.canva.com/design/DAFjSDxUFRk/rsqEQptPoF01SF3I1gTuOQ/edit?utm_content=DAFjSDxUFRk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-## Diagramas: https://drive.google.com/file/d/1Ds-zXQcgYz24vo-ONobUPdkugcAeVOVd/view?usp=sharing
+####  Informe final: https://docs.google.com/document/d/1GPu64phOQBBfllwoBGo87Dbkw335Z0Kr/edit?usp=sharing&ouid=108519585901992583321&rtpof=true&sd=true
+####  Diapositivas: https://www.canva.com/design/DAFjSDxUFRk/rsqEQptPoF01SF3I1gTuOQ/edit?utm_content=DAFjSDxUFRk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
