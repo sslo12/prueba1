@@ -209,7 +209,6 @@ Para ver los dashboard hay que abrir una ventana en incognito en la página web 
 Usuario: shirley@kitchensm.onmicrosoft.com
 Contraseña: 3147144287Sl
 ***
-## Informe final:
+## Informe final: https://docs.google.com/document/d/1GPu64phOQBBfllwoBGo87Dbkw335Z0Kr/edit?usp=sharing&ouid=108519585901992583321&rtpof=true&sd=true
 ## Diapositivas: https://www.canva.com/design/DAFjSDxUFRk/rsqEQptPoF01SF3I1gTuOQ/edit?utm_content=DAFjSDxUFRk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
 ## Diagramas: https://drive.google.com/file/d/1Ds-zXQcgYz24vo-ONobUPdkugcAeVOVd/view?usp=sharing
