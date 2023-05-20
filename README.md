@@ -82,7 +82,7 @@ Instale docker en la maquina vm1, ejecute y coloque su token resultante cuando s
 $ sudo docker swarm join --token SWMTKN-1-4qt4bp8o1jeakj6xtgfsa62esrgb8mq6fyip25444653jv1c2b-cqdk5hl7yf17xi1a943ntw3zo 10.2.0.5:2377
 ```
 ***
-### Ejecute en el servidor
+### Ejecute en vm2
 Clonar el repositorio que contiene la aplicacion. 
 ```
 $ git clone https://github.com/sslo12/smart_kitchen1.git
