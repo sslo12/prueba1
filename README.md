@@ -12,11 +12,11 @@ Lista de tecnologias usadas en el proyecto:
 ## Desarrollo
 
 ### 1. Crear una instancia en AZURE
-Se crea la instancia en azure ubuntu (podes adjuntar link de tutorial).
+Se crea la instancia en azure ubuntu (tutorial: https://youtu.be/LBGnmm0YX14).
 
 Se descarga la clave en nuestro caso es **vm2_key.pem**
 
-Le otorgamos los permisos al archivo para poder usarla (podes adjuntar link de tutorial)
+Le otorgamos los permisos al archivo para poder usarlo
 
 Ingresamos al servidor atraves de ssh.
 ```
@@ -149,29 +149,8 @@ Apache Spark instalado en el entorno de ejecución.
 Un archivo de datos en formato CSV llamado "dataset-proyecto.csv" en el directorio actual.
 
 ## Pasos del Código
-Crear una sesión de Spark: Se crea una sesión de Spark con el nombre "Análisis de datos".
-
-Cargar el dataset en un DataFrame: Se carga el archivo CSV en un DataFrame de Spark.
-
-**Análisis 1**: Análisis y agrupación de datos: Se realiza un análisis y agrupación de datos basado en el campo "id_nodo". Se calcula la cantidad de registros con cada tipo de valor ("verde", "amarilla" y "roja") y se ordena el resultado por el número de registros con valor "roja" de forma descendente.
-
-Mostrar el resultado del Análisis 1: Se muestra el resultado obtenido en el primer análisis.
-
-Convertir la columna "tiempo" a tipo fecha: Se convierte la columna "tiempo" del DataFrame a tipo de dato fecha (timestamp).
-
-Filtrar los datos para "tipo" igual a "roja": Se filtran los datos del DataFrame original para quedarse solo con los registros que tienen el valor "roja" en el campo "tipo".
-
-**Análisis 2**: Contar incendios "roja" por mes: Se agrupan los registros por mes y se cuenta la cantidad de incendios "roja" para cada mes. Los resultados se ordenan por mes en orden ascendente.
-
-Mostrar el resultado del Análisis 2: Se muestra el resultado obtenido en el segundo Análisis.
-
-**Análisis 3**: Obtener promedio de temperatura y gas por nodo: Se calcula el promedio de temperatura y gas por cada nodo. Los resultados se ordenan por el campo "id_nodo".
-
-Mostrar el resultado del Análisis 3: Se muestra el resultado obtenido en el tercer Análisis.
-
-Guardar los resultados en archivos CSV: Los resultados de cada aplicación se guardan en archivos CSV con nombres personalizados: "resultado_analisis1.csv", "resultado_analisis2.csv" y "resultado_analisis3.csv".
-
-///////////////////
+app.py
+***
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, sum, avg, count, month
 
@@ -240,8 +219,15 @@ result3.show()
 result1.write.mode("overwrite").csv("resultado_analisis1.csv", header=True)
 result2.write.mode("overwrite").csv("resultado_analisis2.csv", header=True)
 result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
-////////////////////////////////
 ```
 
 ## Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
 Link: https://youtu.be/FZjQmvwBAdU
+***
+Para ver los dashboard hay que abrir una ventana en incognito en la página web y se debe iniciar sesión con este usuario y contraseña
+Usuario: shirley@kitchensm.onmicrosoft.com
+Contraseña: 3147144287Sl
+
+# Informe final:
+# Diapositivas: https://www.canva.com/design/DAFjSDxUFRk/rsqEQptPoF01SF3I1gTuOQ/edit?utm_content=DAFjSDxUFRk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+# Diagramas: https://drive.google.com/file/d/1Ds-zXQcgYz24vo-ONobUPdkugcAeVOVd/view?usp=sharing
