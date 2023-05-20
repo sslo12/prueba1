@@ -179,17 +179,21 @@ Copiamos el archivo de configuracion de variables de entorno de Spark.
 cp spark-env.sh.template spark-env.sh
 ``
 Editamos este archivo para agregar las IPs de nuestro entorno.
+
 ```
 vim spark-env.sh
 ``
+
 Agregamos:
 
 ```
 SPARK_LOCAL_IP=10.2.0.5
 SPARK_MASTER_HOST=10.2.0.5
 ``
+
 Vamos al directorio sbin e iniciamos el master.
 azureuser@vm2:~/labSpark/spark-3.3.1-bin-hadoop3/sbin$
+
 ```
 ./start-master.sh 
 ``
@@ -199,8 +203,10 @@ También iniciamos el worker.
 ```
 ./start-worker.sh spark://10.2.0.5:7077 
 ``
+
 Ahora debemos de crear un diretorio para nuestra aplicación de analisis de datos distribuidos. 
 azureuser@vm2:~
+
 ```
 $mkdir app_analisis
 ``
@@ -212,6 +218,7 @@ $cd app_analisis
 ``
 azureuser@vm2:~/app_analisis
 Creamos nuestro archivo python donde se ejecutará nuestra aplicación.
+
 ```
 $touch app.py
 ``
@@ -278,6 +285,7 @@ result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 
 Ahora ejecutamos el siguiente comando, para ejecutar la aplicación.
 azureuser@vm2:~/app_analisis
+
 ```
 $spark-submit --master spark://10.2.0.5 app.py
 ``
