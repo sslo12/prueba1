@@ -148,9 +148,8 @@ Este es un código en Python que utiliza Apache Spark para realizar análisis y 
 Apache Spark instalado en el entorno de ejecución.
 Un archivo de datos en formato CSV llamado "dataset-proyecto.csv" en el directorio actual.
 
-## Pasos del Código
+## Código de la aplicación en Spark
 app.py
-***
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, sum, avg, count, month
 
@@ -220,7 +219,7 @@ result1.write.mode("overwrite").csv("resultado_analisis1.csv", header=True)
 result2.write.mode("overwrite").csv("resultado_analisis2.csv", header=True)
 result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 ```
-
+***
 ## Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
 Link: https://youtu.be/FZjQmvwBAdU
 ***
