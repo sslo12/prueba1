@@ -28,13 +28,16 @@
             <a class="nav-link active" aria-current="page" href="admin.php">Usuarios</a> 
             </li> 
             <li class="nav-item"> 
-            <a class="nav-link" href="CrearUser.php">CREAR USUARIO</a> 
+            <a class="nav-link" href="crearUser.php">CREAR USUARIO</a> 
             </li> 
             <li class="nav-item"> 
             <a class="nav-link" href="borrar_usuario.php">BORRAR USUARIO</a> 
             </li>
             <li class="nav-item"> 
             <a class="nav-link" href="admin_Nodo.php">ACTUALIZAR NODO</a> 
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="admin_dashboard.html">DASHBOARD</a>
             </li>
             <li class="nav-item"> 
             <a class="nav-link" href="crear_nodo.php">CREAR NODO</a> 
