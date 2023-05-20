@@ -12,8 +12,12 @@ Lista de tecnologias usadas en el proyecto:
 ## Desarrollo
 
 ### 1. Crear una instancia en AZURE
-Se crea la instancia en azure ubuntu (tutorial: https://youtu.be/LBGnmm0YX14).
+Se crea dos instancias en azure ubuntu (tutorial: https://youtu.be/LBGnmm0YX14).
 
+Una instancia **vm1** (10.2.0.4)
+
+Una instancia **vm2** (10.2.0.5)
+***
 Se descarga la clave en nuestro caso es **vm2_key.pem**
 
 Le otorgamos los permisos al archivo para poder usarlo
@@ -64,10 +68,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 ***
 ### 2. Crear el cluster Docker-swarm
-Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2.
+Crear un cluster de Docker Swarm con un nodo corriendo en la maquina de azure vm2 como master y otro nodo corriendo en la maquina vm1 como worker.
+
+El maquina vm2
 ```
 $ swarm init --advertise-addr 10.2.0.5
 $ sudo docker node ls
+```
+En la maquina vm1
+
+Instale docker en la maquina vm1, ejecute y coloque su token resultante cuando se creo el cluster en la maquina vm2 
+```
+$ sudo docker swarm join --token SWMTKN-1-4qt4bp8o1jeakj6xtgfsa62esrgb8mq6fyip25444653jv1c2b-cqdk5hl7yf17xi1a943ntw3zo 10.2.0.5:2377
 ```
 ***
 ### Ejecute en el servidor
