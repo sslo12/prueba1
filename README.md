@@ -165,6 +165,62 @@ Este es un código en Python que utiliza Apache Spark para realizar análisis y 
 ## Requisitos
 Apache Spark instalado en el entorno de ejecución.
 Un archivo de datos en formato CSV llamado "dataset-proyecto.csv" en el directorio actual.
+Debemos de tener java instalado.
+
+Primero, para poder correr la aplicación, debemos configurar un cluster de spark en modo standalone, con el master y worker
+corriendo en nuestra misma máquina.
+
+Para ello, vamos al directorio de configuración de Spark.
+azureuser@vm2:~/labSpark$ cd spark-3.3.1-bin-hadoop3/conf/
+
+Copiamos el archivo de configuracion de variables de entorno de Spark.
+
+```
+cp spark-env.sh.template spark-env.sh
+``
+Editamos este archivo para agregar las IPs de nuestro entorno.
+```
+vim spark-env.sh
+``
+Agregamos:
+
+```
+SPARK_LOCAL_IP=10.2.0.5
+SPARK_MASTER_HOST=10.2.0.5
+``
+Vamos al directorio sbin e iniciamos el master.
+azureuser@vm2:~/labSpark/spark-3.3.1-bin-hadoop3/sbin$
+```
+./start-master.sh 
+``
+
+También iniciamos el worker.
+
+```
+./start-worker.sh spark://10.2.0.5:7077 
+``
+Ahora debemos de crear un diretorio para nuestra aplicación de analisis de datos distribuidos. 
+azureuser@vm2:~
+```
+$mkdir app_analisis
+``
+
+Accedemos a ella.
+
+```
+$cd app_analisis
+``
+azureuser@vm2:~/app_analisis
+Creamos nuestro archivo python donde se ejecutará nuestra aplicación.
+```
+$touch app.py
+``
+
+La editamos y agregamos el codigo de la aplicación.
+
+```
+$vim app.py
+``
 
 ## Código de la aplicación en Spark
 app.py
@@ -219,6 +275,15 @@ result1.write.mode("overwrite").csv("resultado_analisis1.csv", header=True)
 result2.write.mode("overwrite").csv("resultado_analisis2.csv", header=True)
 result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 ```
+
+Ahora ejecutamos el siguiente comando, para ejecutar la aplicación.
+azureuser@vm2:~/app_analisis
+```
+$spark-submit --master spark://10.2.0.5 app.py
+``
+
+Nos mostrará los resultados de los 3 analisis de datos en pantalla y además de eso, nos generará 3 carpetas, con los 3 dataframes que hemos obtenido de nuestros analisis.
+
 ***
 ##  Paso a Paso para conectar la pagina web al dashboard desde la Api de Power BI
 
