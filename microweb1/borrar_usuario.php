@@ -35,6 +35,9 @@
             <li class="nav-item"> 
             <a class="nav-link" href="admin_Nodo.php">ACTUALIZAR NODO</a> 
             </li>
+             <li class="nav-item">
+            <a class="nav-link" href="admin_dashboard.html">DASHBOARD</a>
+            </li>
             <li class="nav-item"> 
             <a class="nav-link" href="crear_nodo.php">CREAR NODO</a> 
             </li>
