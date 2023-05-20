@@ -225,9 +225,7 @@ result3.write.mode("overwrite").csv("resultado_analisis3.csv", header=True)
 Link: https://youtu.be/FZjQmvwBAdU
 
 Para ver los dashboard hay que abrir una ventana en incognito en la página web y se debe iniciar sesión con este usuario y contraseña
-
 Usuario: shirley@kitchensm.onmicrosoft.com
-
 Contraseña: 3147144287Sl
 ***
 ###  Informe final: 
@@ -237,5 +235,5 @@ https://docs.google.com/document/d/1GPu64phOQBBfllwoBGo87Dbkw335Z0Kr/edit?usp=sh
 https://www.canva.com/design/DAFjSDxUFRk/rsqEQptPoF01SF3I1gTuOQ/edit?utm_content=DAFjSDxUFRk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ***
 ###  Diagramas:
-https://drive.google.com/file/d/1Ds-zXQcgYz24vo-ONobUPdkugcAeVOVd/view?usp=sharing
+https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&layers=1&nav=1&page-id=uA6sPsXweEkxtlOyvErE&title=Diagramas.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1Ds-zXQcgYz24vo-ONobUPdkugcAeVOVd%26export%3Ddownload
 
