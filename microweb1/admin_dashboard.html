@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .dashboard {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard iframe {
+            width: 100%;
+            height: 541.25px; /* Ajusta la altura según tus necesidades */
+            border: none;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="dashboard">
+            <iframe title="Promedio temperatura y gas" src="https://app.powerbi.com/reportEmbed?reportId=24d889d7-6ed1-4a50-9a92-a5dbb9fc9058&autoAuth=true&ctid=b86bda1f-93d0-45a9-977a-7a7e0e540ebb" allowfullscreen></iframe>
+        </div>
+        <div class="dashboard">
+            <iframe title="Tipo de alertas" src="https://app.powerbi.com/reportEmbed?reportId=63dece03-e03b-4cba-afac-dc551735079e&autoAuth=true&ctid=b86bda1f-93d0-45a9-977a-7a7e0e540ebb" allowfullscreen></iframe>
+        </div>
+        <div class="dashboard">
+            <iframe title="mes con mas incendios" src="https://app.powerbi.com/reportEmbed?reportId=286e68bb-999f-40ec-a635-a4291c5e9805&autoAuth=true&ctid=b86bda1f-93d0-45a9-977a-7a7e0e540ebb" allowfullscreen></iframe>
+        </div>
+        <div class="btn-container">
+            <a href="admin.php">Volver al menu principal</a>
+        </div>
+    </div>
+</body>
+</html>
+
