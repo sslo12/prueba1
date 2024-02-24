@@ -1,6 +1,6 @@
 # Despliegue de la aplicación smart_kitchen
 
-Esta es una aplicacion web basada en microservicios, que consta de 5 microservicios, la cual permite generar alertas para evitar incendos por medio de mediciones de temperatura en la cocina.
+Esta es una aplicacion web basada en microservicios, que consta de 5 microservicios, la cual permite generar alertas para evitar incendios por medio de mediciones de temperatura en la cocina.
 
 ## Requisitos previos
 ***
